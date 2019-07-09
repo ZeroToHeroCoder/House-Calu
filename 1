@@ -1,0 +1,19 @@
+var hoaPay = prompt("What is the monthly HOA or condo fee?");
+var yearlyTax = prompt("What was last years real estate tax amount?");
+var taxAsses = prompt("What was last years tax assesment?");
+var houseAmt = prompt("What is the purchase price?");
+//var downPay = prompt("What is your down payment amount?");
+//var intrRate = prompt("What is the interest rate for your preposted loan?");
+//var loanYears = prompt("What is the number of year on your loan?");
+var pmiEst = prompt("What is the PMI Est?");
+var morageInsure = prompt("How much is the mortgage hazard insurance?");
+
+
+var monthyRealEstateCost = (yearlyTax / taxAsses) * houseAmt;
+var monRealby12 = monthyRealEstateCost / 12;
+var monthlyPay = Number(monRealby12) + Number(hoaPay) + Number(pmiEst) + Number(morageInsure);
+console.log(monthlyPay);
+
+
+
+//console.log(hoaPay + yearlyTax + taxAsses + houseAmt + downPay + intrRate + loanYears + pmiEst + morageInsure);
